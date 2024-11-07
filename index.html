@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaç Gün Kaldı Hesaplama</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #dfdbdb;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #555;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #333333;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #000000;
+        }
+        .result {
+            margin-top: 20px;
+            background-color: #efefef;
+            border: 1px solid #353535;
+            border-radius: 4px;
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+        /* Responsive Tasarım */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            button {
+                font-size: 16px;
+            }
+            label {
+                font-size: 13px;
+            }
+            select {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kaç Gün Kaldı Hesaplama</h1>
+		<p align="center">Lütfen hedef tarih seçiniz.</p>
+        <form id="dateForm" onsubmit="return calculateDays(event)">
+            <div class="form-group">
+                <label for="day">Gün:</label>
+                <select id="day" name="day" required>
+                    <option value="">Gün Seçin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="month">Ay:</label>
+                <select id="month" name="month" required>
+                    <option value="">Ay Seçin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="year">Yıl:</label>
+                <select id="year" name="year" required>
+                    <option value="">Yıl Seçin</option>
+                </select>
+            </div>
+            <button type="submit">Hesapla</button>
+        </form>
+
+        <div id="result" class="result"></div>
+        <br />
+        <h1>Kaç Gün Kaldı?</h1><p>Hayatımızdaki önemli günleri, yaklaşan etkinlikleri ya da merakla beklediğimiz tatilleri daha sabırsız ve heyecan verici kılma peşindeyiz. Bu süreçte "Kaç Gün Kaldı Hesaplama" aracı bizlere rehber olur. Zamanın getirdiği belirsizliği ortadan kaldırarak, sevdiklerimizle paylaşacağımız özel anlara doğru adım adım ilerlememizi sağlar. Geriye sayım yaparken bir yandan geçen günlerin kıymetini bilmemize yardımcı olur. Böylece her sabah uyandığımızda yaklaşan anların coşkusunu içimizde hissederiz.</p><h2>Önemli Tarihler İçin Geri Sayım Araçlarının Kullanımı</h2><p>Önemli tarihler, yaşamımızda unutulmaz bir yer eder. Sevdiğimiz anlar için sabırsızlanırız, değil mi? Geri sayım araçları, bu heyecanı farklı kılar. Tarihler hızla yaklaşırken, belirsizliğin içinden sıyrılırız. Bu araçlar sayesinde anın tadını çıkarırız. Peki, geri sayım yaparken bir yandan da zamanın durduğu hissine kapılır mıyız? Çelişkili hisler arasında dolanırken aslında hayatın o anının kıymetini anlarız. Kısacası, geri sayım araçları bizi heyecana sürüklerken, değerli anları kutlamaya da hazırlar.</p><h2>Zaman Yönetiminde 'Kaç Gün Kaldı' Uygulamalarının Rolü</h2><p>Hayatın hızla aktığı bu çağda, zaman yönetimi büyük bir öncelik haline geldi. 'Kaç gün kaldı' uygulamaları, bu süreçte dikkat çekici bir yardımcı rol üstleniyor. Bu araçlar, hedeflerinize doğru ilerlerken zamanın gerçek değerini hissettiriyor. Ancak, bu uygulamalarla kontrolü kaybedenler de var, çünkü her an bir geri sayımın baskısını hissediyorsunuz. Bu rağmen, farkındalık ve planlamada önemli katkılar sağlıyor. Zamanın uçuculuğunu idrak etmek, bir sonraki adımınızı belirlemenizdeki en güçlü kılavuz olabilir. Yine de, burada esas olan sizin iradeniz ve kararlılığınız.</p><h2>Etkinlik ve Proje Planlamasında Geri Sayım Stratejileri</h2><p>Proje planlaması, adeta bir saat gibi titiz bir düzen ister. Peki, geri sayım? Bu, tıpkı bir maratonun son metreleri gibi heyecanlı olabilir. Her gün bir adım daha atmak gerekiyor. Hedefe yaklaştıkça, heyecan ve başarı duygusuyla dolarsınız. Kimi zaman belirsizlikler çıkabilir karşınıza, bu heyecanı çift taraflı yaşatır. Ancak bu belirsizlikler, yeni yollar keşfetmenize sebep olur. Siz, yılmadan her gün yeni bir daire çizersiniz. Ritim ve düzen anlayışınız, etkinlik ve proje planlamasında size rehber olur. Unutmayın, zamanın akışına ayak uydurmak çoğu kez zaferi getirir.</p><h2 style="text-align:center;">Sıkça Sorulan Sorular</h2><h3>Kaç gün kaldığını nasıl hesaplayabilirim?</h3><p> </p><p>Kaç gün kaldığını hesaplamak için belirli bir tarih ile bugünün tarihini karşılaştırmanız gerekiyor. Bunun için takvim uygulamaları ya da çevrimiçi 'gün sayacı' araçlarını kullanabilirsiniz.</p><h3>Gün hesaplamasında nelere dikkat etmeliyim?</h3><p> </p><p>Gün hesaplaması yaparken, başlangıç ve bitiş tarihlerini doğru belirlemek önemlidir. Ayrıca, ayların farklı gün sayılarına ve yılın artık yıl olup olmadığına dikkat etmelisiniz.</p><h3>Arada geçen tatil günlerini hesaplamadan çıkarmalı mıyım?</h3><p> </p><p>Bu tamamen sizin ihtiyacınıza bağlıdır. Eğer yalnızca iş günlerini hesaba katmak istiyorsanız, tatil günlerini ve hafta sonlarını çıkarmalısınız. Ancak genel bir süre hesaplıyorsanız tüm günleri sayabilirsiniz.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            populateDays();
+            populateMonths();
+            populateYears();
+        });
+
+        function populateDays() {
+            const daySelect = document.getElementById('day');
+            for (let i = 1; i <= 31; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                daySelect.appendChild(option);
+            }
+        }
+
+        function populateMonths() {
+            const monthSelect = document.getElementById('month');
+            const months = [
+                'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+                'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'
+            ];
+            months.forEach((month, index) => {
+                const option = document.createElement('option');
+                option.value = index + 1;
+                option.textContent = month;
+                monthSelect.appendChild(option);
+            });
+        }
+
+        function populateYears() {
+            const yearSelect = document.getElementById('year');
+            const currentYear = new Date().getFullYear();
+            const startYear = currentYear;
+            const endYear = currentYear + 10; // Örneğin, 10 yıl ileri
+            for (let i = startYear; i <= endYear; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                yearSelect.appendChild(option);
+            }
+        }
+
+        function calculateDays(event) {
+            event.preventDefault(); // Formun varsayılan gönderimini engeller
+
+            const day = parseInt(document.getElementById('day').value, 10);
+            const month = parseInt(document.getElementById('month').value, 10);
+            const year = parseInt(document.getElementById('year').value, 10);
+
+            // Tarih geçerliliğini kontrol et
+            if (isNaN(day) || isNaN(month) || isNaN(year)) {
+                alert('Geçersiz tarih bilgisi.');
+                return false;
+            }
+
+            const today = new Date(); // Bugünün tarihi
+            const selectedDate = new Date(year, month - 1, day); // Kullanıcının seçtiği tarih
+
+            // Saatleri sıfırlayarak sadece tarihi karşılaştır
+            today.setHours(0,0,0,0);
+            if (selectedDate < today) {
+                alert('Seçilen tarih bugünden önce olamaz.');
+                return false;
+            }
+
+            const timeDiff = selectedDate - today; // Milliseconds
+            const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+            const result = `
+                <p>Tarih : ${new Date().toLocaleDateString('tr-TR')}</p>
+                <p>Seçilen Tarih : ${selectedDate.toLocaleDateString('tr-TR')}</p>
+                <p>Kalan Süre : ${daysLeft} Gün</p>
+            `;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = result;
+            resultDiv.style.display = 'block'; // Sonucu görünür yap
+            return false; // Formun sayfayı yeniden yüklemesini engeller
+        }
+    </script>
+</body>
+</html>
